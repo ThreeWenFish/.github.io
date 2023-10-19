@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+
+<html lang="zh_CH">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>有关《猎杀：对决》平衡性相关的拆解 |  TWFish，三文鱼</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-kj-hunt1"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  有关《猎杀：对决》平衡性相关的拆解
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/10/20/kj-hunt1/" class="article-date">
+  <time datetime="2023-10-19T19:58:53.000Z" itemprop="datePublished">2023-10-20</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8B%86%E8%A7%A3%E3%80%81%E5%88%86%E6%9E%90%E3%80%81%E8%80%83%E6%8D%AE/">拆解、分析、考据</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">5.5k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">18 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>本篇文章旨在分析猎杀对决是如何塑造平衡，以及聚焦它在游戏玩法上的联动创新为游戏性带来的负面收益上。其撰写时间为1.5版本更新时，与现在版本的平衡性有所差距。</p>
+<p>权当有感而发，抛砖引玉。文笔欠佳，还请谅解。</p>
+<h2 id="1-有关武器的平衡性"><a href="#1-有关武器的平衡性" class="headerlink" title="1. 有关武器的平衡性"></a>1. 有关武器的平衡性</h2><p>作为一款以非对称对抗，高额死亡惩罚和有限资源为前提的非传统FPS大逃杀游戏，《猎杀：对决》自然不可能像《绝地求生》或是《Apex》之类的传统大逃杀，在枪械上削平玩家的纸面差距，亦不可能像《逃离塔科夫》一样，舍弃竞技性。</p>
+<p>某种意义上，虽然实际有些差距，但你可以理解为C社在试着用塔科夫的方式来做绝地求生的平衡，以得到一个二者之间的游戏模式。</p>
+<h3 id="1-1-子弹"><a href="#1-1-子弹" class="headerlink" title="1.1 子弹"></a>1.1 子弹</h3><p>猎杀对决将枪械根据使用弹药类型的不同大致分为短子弹，中子弹，长子弹，霰弹，特殊子弹，其中不同的子弹仅适配所属的枪械。根据枪械的不同，不同子弹亦有特性相差奇大的特殊弹种。</p>
+<p>这一分类依据基本不按照现实逻辑运作，而是更多为游戏性服务，如使用7.62mm等效口径的.30-40步枪弹的克拉格-约根森步枪被归为长子弹类型，不仅与使用重达450格令的.50-70全威力弹的夏普斯LRR分在一个子弹分级（这可是能一枪射杀犀牛的威力），而使用405格令重的.45-70子弹的春田M1873却被.30-40力压一头，屈居中子弹位。</p>
+<p><img src="/2023/10/20/kj-hunt1/1.png" alt="通过对比很容易看出猎杀对决中的春田M1866实际上是春田M1873"></p>
+<p>比起其他拟真射击游戏更多通过枪械本身来决定其最佳射击范围的做法来说，猎杀对决通过区分弹药类型的方式将若干把武器分入了多个不同的作战区间——10m，35m，60m，150m和更远。</p>
+<p><img src="/2023/10/20/kj-hunt1/2.png"></p>
+<p>在下述1.3部分中提供的伤害参考表格中，您可以比对上图中标红的四处距离与那些武器实际能造成伤害的密切相关性。当然，划定的最优作战区间并非仅由伤害决定，如60米以内，长子弹伤害依旧高于中子弹与短子弹。划定的考量包含了武器售价和致死效率等因素。</p>
+<h3 id="1-2-特殊弹"><a href="#1-2-特殊弹" class="headerlink" title="1.2 特殊弹"></a>1.2 特殊弹</h3><p>除了常规的五种弹药区分外，猎杀对决对每把枪的枪族都设计了指定的特殊弹药。如果解锁了这把枪的某一特殊弹药，那么在这把枪及其所有衍伸型号中，都可以购买使用。</p>
+<p>对于常规武器，可选的特殊弹种主要包括造成流血效果，降低穿透能力的达姆弹；强化穿透能力，降低伤害衰减，却降低枪口初速的全金属被甲弹；强化初速，提高枪械控制难度的高速弹；施加禁疗效果，降低穿透的毒子弹；大幅度提升穿透能力，降低伤害衰减，却降低伤害的尖头弹；击中引发破片爆炸的爆炸弹等等。当然，对于霰弹则有硬币、独头、照明、龙息等弹头，而弓弩之类的特殊弹种则更多，在此不再赘述。</p>
+<p>由于主要介绍平衡性之于纸面数据的表现，就不介绍禁疗&#x2F;流血&#x2F;爆炸等实战意义更高的弹药类型。</p>
+<h3 id="1-3-平衡的第一则，伤害与其衰减——以击中上胸为例"><a href="#1-3-平衡的第一则，伤害与其衰减——以击中上胸为例" class="headerlink" title="1.3 平衡的第一则，伤害与其衰减——以击中上胸为例"></a>1.3 平衡的第一则，伤害与其衰减——以击中上胸为例</h3><p>下图中，<em><strong>红色</strong></em>代表必定致死，<em><strong>橙色</strong></em>代表大概率致死（达到血量上限的伤害），<em><strong>黄色</strong></em>代表双击致死（超出一半血量总数的伤害）。</p>
+<p>由于猎杀对决的角色被击倒后会损失血条的特性，您应该格外关注接近125和100这两个伤害数字的武器。在玩家的第一个血条为25点时，被击倒一次后就可被高于125点的伤害直接击倒，在玩家的第一个血条为50点时，则会被高于100点的伤害直接击倒。</p>
+<p>选择上胸则是因为此处的伤害数据能最好的直观表现各把武器。</p>
+<p><img src="/2023/10/20/kj-hunt1/3.png"></p>
+<p>猎杀对决采用根据子弹飞行的距离逐步降低伤害的衰减方式。与以《Battlefield1》为代表，通过提高武器在某一距离范围内伤害的方式来决定武器最佳距离的做法不同，也并非传统FPS游戏单纯根据子弹飞行的距离计算衰减伤害，猎杀对决使用不同长度弹药的基础伤害和衰减系数差异来控制它们在指定距离范围的优越性。</p>
+<p>由图可见，在使用常规弹&#x2F;鹿弹时，正常型号（非截短，刺刀与消音型）的枪械，大体遵照长子弹在150米内两枪上胸致死，中子弹在60米内两枪上胸致死，短子弹在35米内两枪上胸致死，霰弹在10米内一枪上胸致死的原则。</p>
+<p>需注意的是，猎杀对决为武器设置了射程这一隐藏属性，超出射程的弹丸实体会被游戏删除。对于大多数武器来说最大射程在600米左右，而发射鹿弹的霰弹武器和猎象步枪的最大射程则分别为60米和300~350米。即使伤害衰减为0，弹丸在超出射程上限前仍旧能作为实体与地图中的其他元素交互。</p>
+<h3 id="1-4-平衡的第二则，击中部位与伤害差异——以勒贝尔，温菲尔德百年庆典与温菲尔德为例"><a href="#1-4-平衡的第二则，击中部位与伤害差异——以勒贝尔，温菲尔德百年庆典与温菲尔德为例" class="headerlink" title="1.4 平衡的第二则，击中部位与伤害差异——以勒贝尔，温菲尔德百年庆典与温菲尔德为例"></a>1.4 平衡的第二则，击中部位与伤害差异——以勒贝尔，温菲尔德百年庆典与温菲尔德为例</h3><p>与大多数FPS游戏相同，猎杀对决也拥有击中不同身体部位，造成伤害差异的机制，以鼓励玩家进行精确瞄准的射击。游戏中，根据击中伤害的不同，可以分为头部，上胸，腹部，手臂和腿部五个部位。</p>
+<p>在此我想援引勒贝尔，温菲尔德百年庆典和温菲尔德三把不同子弹类型的武器为例。之所以选取这三者是因为我认为这三把枪是C社进行新武器制作平衡时参照的标准。具体的理由请参见1.5部分的衰减曲线与理想DPS表格。</p>
+<p><img src="/2023/10/20/kj-hunt1/4.png"></p>
+<p>通过爆头伤害的极高倍率，不难看出猎杀对决鼓励玩家更多射击能大概率造成至死的头部，这与其无下坠的弹道模式设计不谋而合。通过中子弹与短子弹都在150米这个关键距离上设定为爆头刚好致死这一点也能看出，这种设计旨在中和弹药压制对中，短子弹带来的战斗劣势。高额的爆头伤害也鼓励了玩家采取更加激进的打法，并某种程度上提升了一场战斗的随机性。</p>
+<p>当然，追溯游戏的更新和平衡调整历程，以150米作为关键距离的设定并非在游戏上线之初就存在。在1.0版本或更早的年代中，中&#x2F;短子弹武器使用100米作为爆头致死距离，而长子弹的爆头致死距离则一般在200~250米之间。这一改动源自1.6版本，目的是为了适配在该版本上线的新地图，德莎莱。</p>
+<p><img src="/2023/10/20/kj-hunt1/5.png" alt="左为“静水沼泽”，右为“罗森三角洲”，是猎杀对决早期的两张地图"></p>
+<p>在早期的两张地图——静水沼泽与罗森三角洲中，受限于树林、岩石、建筑等障碍物的遮挡，以及相对复杂的地形环境，玩家的交战距离往往在50米以内，因此在早期版本中，我们能看到大量关于短子弹和中子弹武器的平衡补丁。比如多尔西96作为曾经使用中子弹的半自动手枪，因伤害过高和射速奇快的缘故被削弱为特殊弹药与短子弹等效的伤害。</p>
+<p><img src="/2023/10/20/kj-hunt1/6.png" alt="猎杀对决的第三张地图“德莎莱”"></p>
+<p>但在德莎莱上线后，其开阔的地形，相比其他地图更加高和频繁的地形落差，以及相较于前两张地图稀少的植被覆盖，让猎人们相互发现并开始交火的距离延长至70米以上。毕竟，如果将丘陵和高地铺平展开，德莎莱的总面积将在其他两张地图的1.3~1.7倍左右。</p>
+<p>一个极端的例子是地图左上角的王蛇矿井西北和摩西养鸡场正西两处出生点。猎杀对决得到出生点往往拥有150米到200米的间隔距离，并被地图边界处存在的障碍物所分隔，以防止猎人们在出生后立刻进行交火。但在德莎莱，王蛇矿井西北和摩西养鸡场正西两处出生点的猎人几乎可以依托出生点的建筑物和障碍物，在出生后立刻发现对方并进行战斗，这一距离直线约为140~160米，实际上可以接近200米，而这样的交战距离在德莎莱上比比皆是，这在地图北部的山区尤为突出。</p>
+<p>这导致使用短子弹和中子弹的武器难以在这一交战距离发挥作用，因此，150米的爆头致死距离似乎是一种出于地图的妥协。</p>
+<h3 id="1-5-平衡的第三则，衰减与射速——以击中上胸为例"><a href="#1-5-平衡的第三则，衰减与射速——以击中上胸为例" class="headerlink" title="1.5 平衡的第三则，衰减与射速——以击中上胸为例"></a>1.5 平衡的第三则，衰减与射速——以击中上胸为例</h3><p>相较于子弹类型&amp;枪械型号共同决定着一把枪的伤害这样更具复杂性的设计，猎杀对决对伤害衰减的射击要简单但标准的多。</p>
+<p>根据枪械种类和他们的子弹类型，猎杀对决将枪械大致分为短子弹长枪，短子弹手枪，短子弹消音长枪，短子弹消音手枪，中子弹长枪，中子弹手枪，中子弹消音长枪，长子弹长枪，长子弹手枪，长子弹消音长枪，霰弹与猎象步枪共12种不同的武器类型，每种类型有着独立的衰减系数，并根据距离的不同有着更加细化的差异，这让猎杀对决的武器伤害曲线变得更加弹性化，且有利于后期的持续平衡更新。</p>
+<p>下表展示了伤害衰减比例，单位为（(造成伤害&#x2F;纸面数据)&#x2F;米）,由各部位伤害的均值计算而来。</p>
+<p>不难看出，衰减系数仍旧因为子弹类型大致可以归为四类。长子弹武器往往有着更优秀的伤害保存距离，一般在超过40米后才会开始出现伤害衰减。这与1.3部分的表格可以互为参照。</p>
+<p><img src="/2023/10/20/kj-hunt1/7.png"></p>
+<p>下图为这一表格中具有代表性数据的可视化。</p>
+<p><img src="/2023/10/20/kj-hunt1/8.png"></p>
+<p>全金属被甲弹通过降低衰减的方式延长了枪械的作战距离，使得相对较短的子弹也能在长距离上与相对更长的子弹有一战之力，但出于较短子弹更低的基础伤害，这样的增强并不至于破坏整体的平衡，而是让子弹类型之间的过渡变得更加平滑。</p>
+<p><img src="/2023/10/20/kj-hunt1/9.png"></p>
+<p>另一个会显著影响武器平衡的数值便是射速。</p>
+<p>因为霰弹弹丸不便于计算，故此处不列出霰弹数值。弹药统一使用默认的常规弹。</p>
+<p>此处的理论DPS不能提供有实战意义的数据，不过可以作为该武器火力密度的一种参考。理论DPS越高，在同一时间段内，统一命中率下，能造成的理论伤害也就越高。不过，考虑到实际交战距离与武器射速，猎杀对决的理想ttk基本都在1秒以上，而两位猎人交火的持续时间往往只是一瞬，武器的单发伤害同样重要。</p>
+<p>当然，较高的理论DPS也意味着这把武器更加适合近身作战，能表现出强力的压制效果。</p>
+<p>如果比对定位相似武器的伤害和射速，如同属大栏位长子弹栓动步枪的勒贝尔，贝蒂埃M1892，莫辛-纳甘和克拉格-约根森，不难发现猎杀对决将勒贝作为了一款在伤害，价格和射速上都比较中规中矩的武器。同理也可以发现温菲尔德百年庆典和温菲尔德在各自子弹类型中的相似定位，这也是我在前文中会将它们称呼为平衡性标准的缘故。作为最新加入游戏的武器之一，在数据上更像是全面加强版温菲尔德百年庆典的克拉格-约根森，显然是偏离了这一设计思路的。因此它也在上个和当前版本中被称为打破平衡性的一把武器。</p>
+<h3 id="1-6-平衡的第四则，瞄具、弹速与经济——以中与长子弹武器为例"><a href="#1-6-平衡的第四则，瞄具、弹速与经济——以中与长子弹武器为例" class="headerlink" title="1.6 平衡的第四则，瞄具、弹速与经济——以中与长子弹武器为例"></a>1.6 平衡的第四则，瞄具、弹速与经济——以中与长子弹武器为例</h3><p>猎杀对决中存在五种不同的瞄具类型：机瞄&#x2F;照门铁瞄、觇孔瞄具、死亡之眼瞄准镜、神射手瞄准镜和狙击型瞄准镜。它们所对应的放大倍率分别为2.25x、9.5x、5.0x、6.5x、12x，其中猎象步枪的觇孔瞄具放大倍率为特殊的5.5x。</p>
+<p>带有瞄具的武器被视作一种需要在价格上作出让步的加强，根据是否为瞄准镜&#x2F;瞄准镜的类型而有所不同。觇孔瞄具有着较高的放大倍率，但狭窄的瞄准视野和不享受技能加持的特性让它成为了最低廉的瞄具类型，而从死亡之眼到狙击型，则是价格依此升高。</p>
+<p>但与《逃离塔科夫》等支持武器自由改装的游戏不同，猎杀对决并不支持玩家对自己购买的武器进行自定义。因此“没有装备瞄具的白板武器”和“装备瞄具的同款武器”在游戏里并不相同，后者视作前者的一种改进型号，两者独立存在，这有些类似《Battlefield1》中步兵型步枪和狙击型步枪的差别。而何种武器能够装备何种瞄具，自然也由游戏决定。</p>
+<p>猎杀对决对瞄具的分配反映出平衡组对于某款武器的定位更偏向何种类型，是更适合近距离冲突、中距离作战还是远程交火。</p>
+<p>考虑到短子弹的长枪较少且没有狙击型倍镜，我们以比较典型的中和长子弹武器为例。</p>
+<p><img src="/2023/10/20/kj-hunt1/10.png" alt="自上到下分别为维特利，春田M1866和温菲尔德百年庆典"></p>
+<p>维特利作为中子弹武器中唯一一把拥有两种不同瞄具型号的武器，可以佐证瞄准镜放大倍率和价格正相关的观点。参照1.3中的伤害表格，也能看出维特利有着对于一把中子弹武器来说较高的中近程（60米内）战斗能力，这与它的瞄具定位是相符的。</p>
+<p><img src="/2023/10/20/kj-hunt1/11.png"></p>
+<p>然而维特利拥有三者中最低的弹速，使得它在射击远距离移动目标时往往力不从心。</p>
+<p>春田M1866拥有较高的单发伤害和中等的弹速，亦比较适合神射手镜，而弹速最快的温菲尔德百年庆典有着最长的瞄准镜，弹速更快的它也适合在远处对敌对猎人进行爆头。</p>
+<p>春田作为一把单发装填的后膛步枪，在游戏中的价格会因为其持续作战能力低下而大打折扣。</p>
+<p><img src="/2023/10/20/kj-hunt1/12.png"></p>
+<p><img src="/2023/10/20/kj-hunt1/13.png"></p>
+<p>长子弹武器更加能反映出瞄具和经济的关系，因为武器种类偏多，因此在此就略去单发装填的武器了。可以看出装配了神射手和狙击型瞄准镜的步枪价格奇高，这也与后者较高且相对更安全的作战距离有关的。</p>
+<h2 id="2-玩法和那些负面收益"><a href="#2-玩法和那些负面收益" class="headerlink" title="2. 玩法和那些负面收益"></a>2. 玩法和那些负面收益</h2><p>猎杀对决同时拥有非对称，竞技与非传统大逃杀三个不同的标签，当然可以说这是一种创新玩法。但其游戏设计中存在的弊端也让猎杀对决有着不小的缺陷，这一节将具体讲述其中几个部分。</p>
+<h2 id><a href="#" class="headerlink" title></a></h2><h3 id="2-1-游戏目的和玩家是怎么做的"><a href="#2-1-游戏目的和玩家是怎么做的" class="headerlink" title="2.1 游戏目的和玩家是怎么做的"></a>2.1 游戏目的和玩家是怎么做的</h3><p><img src="/2023/10/20/kj-hunt1/14.png"></p>
+<p>让我们回到地图上，猎杀对决的每张地图均包含16个不同的建筑群落，其中的1或2个可能有Boss存在，其余的则是包含指向Boss存在地区的线索。如果没有其他敌对猎人的干扰，正常情况下一局游戏的流程应为“摸线索——&gt;开Boss——&gt;拿到赏金撤离”。其中获取赏金撤离也是玩家在携带有一定价值的武器装备和消耗品进入地图时唯一能得到收益的方式。</p>
+<p>一平方公里大小的地图看似为玩家提供了相当的自由度，但猎杀对决PvP更胜于PvE数十倍烈度的竞技游戏玩法和一局中有限的赏金数量将游戏不可避免的导向了“摸线索——&gt;开Boss&#x2F;别人先开了Boss——&gt;打到剩下最后一支猎人小队拿到赏金撤离”的固定流程。可以说，作为一款PvPvE游戏，猎杀对决的PvE内容注定只能成为PvP的注脚或助力，而非游戏的核心。</p>
+<p>如《逃离塔科夫》中，玩家可以选择搜刮地图，前往核心交火区PvP或单纯逛街寻找AI和做任务等多样化玩法不同，也与《APEX》中，玩家可以选择进入毒圈内交火，获取更多补给资源，或者在圈边猥琐发育，以稳定博得更好名次的多样选择亦不同。《猎杀：对决》的流程稳定到甚至可以掐表计算各支猎人队伍在正常情况下的进度。以美国西部服务器的4星~6星（对猎杀对决有一定理解，有作战能力和一定游戏时长的玩家大概会被分入这个区间）为例，一局游戏快则5分钟，慢则10分钟，Boss必然会被放逐。玩家往往在第一分钟就会进入第一个建筑群进行线索搜集，而完成三个线索搜集并转移至Boss房，在使用耐力针跑图的熟练猎人手中往往只需要7分钟左右的时间。</p>
+<p>在这样的环境下，如果玩家继续充分享受地图的自由度，就将在一局游戏中几乎无所收益。所以，猎杀对决在玩法的利益导向上恰恰限制了玩家自由施展的空间。</p>
+<h3 id="2-2-那些和声音有关的"><a href="#2-2-那些和声音有关的" class="headerlink" title="2.2 那些和声音有关的"></a>2.2 那些和声音有关的</h3><p>除了Boss放逐的声音外，另一个会吸引玩家蜂拥而至的便是声音，尤其是枪声和爆炸声。这是玩家在遇到其他猎人或者选择使用非近战武器快速放逐Boss时几乎必然会发生的事。抱着黄雀在后的心态和基于游戏胜者通吃的玩法，几乎没有玩家不会选择前往交火区一探究竟或抓timing成为那只黄雀。</p>
+<p>而猎杀对决非爆头和霰弹枪精确致死的情况下较长的ttk和极短的开火窗口，让一场3v3且没能第一时间分出胜负的交火变得极其漫长。在双方为遭遇战的情况下，在地图中央2支小队爆发的一场战斗往往会持续到地图上只剩1支小队为止，最先开始交火的两支小队在战胜敌人后往往就面临接敌第二支第三支队伍的情况。</p>
+<p>而双方不为遭遇战，在房区进行攻守时，节奏便更为拖沓，毕竟，某个房区响枪往往意味着Boss也在那里。进攻方如果在一两分钟内没能创造突破口，就会被赶来的第二第三支队伍攻击，从而变成数支队伍在同一个建筑区内的混战。</p>
+<p>可以说，这是猎杀对决游戏模式导致的必然性。</p>
+<h3 id="2-3-一个综述"><a href="#2-3-一个综述" class="headerlink" title="2.3 一个综述"></a>2.3 一个综述</h3><p>总而言之，越偏向高端对局，一局游戏的流程就越接近且雷同。玩家将频繁的面对20分钟以内的一局游戏和随之而来的不间断高烈度作战，或是被多把狙击步枪架住房区，面对40分钟膀胱局进攻方的不断试探和撤离拦截。这两者情况重复出现在对局中，毫无疑问会让玩家的精力被大幅度消磨。</p>
+<p>而进行娱乐玩法的行为也会因为经验充分对手的应对完美、效率上不如标准最速流程的玩法，在收益上大打折扣。而赚取足够经济的方式，仍然要回到一局局正常的游戏对决中去。</p>
+<p>相较于猎杀对决高学习成本的入门门槛，这样被格式化的游戏常规流程的枯燥，可能也是留存玩家基数偏少的原因吧。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B9%B3%E8%A1%A1%E6%80%A7/" rel="tag">平衡性</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8B%86%E8%A7%A3/" rel="tag">拆解</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E5%80%BC/" rel="tag">数值</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/10/20/kj-minecraft1/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            有关《Minecraft》爆炸算法的拆解
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/10/20/kj-thaumcraft/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">有关《Thaumcraft 4》设定分析考据与世界观</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2023
+        <i class="ri-heart-fill heart_icon"></i> TWFish
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayerside.png" alt="TWFish，三文鱼"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">三文鱼</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>
