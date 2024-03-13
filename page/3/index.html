@@ -141,478 +141,6 @@
     
     
     <article
-  id="post-dl-PJSHrole"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/03/11/dl-PJSHrole/"
-    >《Project:SeniorHigh》角色/数值设计方案</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/03/11/dl-PJSHrole/" class="article-date">
-  <time datetime="2024-03-11T00:15:30.000Z" itemprop="datePublished">2024-03-11</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%8B%AC%E7%AB%8B%E4%BD%9C%E5%93%81/">独立作品</a> / <a class="article-category-link" href="/categories/%E7%8B%AC%E7%AB%8B%E4%BD%9C%E5%93%81/%E7%B3%BB%E7%BB%9F%E7%AD%96%E5%88%92/">系统策划</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="角色构成"><a href="#角色构成" class="headerlink" title="角色构成"></a>角色构成</h1><p><img src="/2024/03/11/dl-PJSHrole/1.png"></p>
-<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>角色的各项可量化数值，包含与成长相关的角色等级、角色成长，以及与战斗有关的生命、护盾、韧性。</p>
-<table>
-<thead>
-<tr>
-<th align="left">名称</th>
-<th align="left">内部命名</th>
-<th align="left">期望效果</th>
-<th align="left">默认值&#x2F;初始值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">角色等级</td>
-<td align="left">CharacterLV</td>
-<td align="left">角色的等级</td>
-<td align="left">1</td>
-</tr>
-<tr>
-<td align="left">角色成长</td>
-<td align="left">CharacterCG</td>
-<td align="left">角色升级后获得指定数量的强化点</td>
-<td align="left">0</td>
-</tr>
-<tr>
-<td align="left">生命</td>
-<td align="left">CharacterHP</td>
-<td align="left">角色的血量，归零时角色退场<br>生命不可大于角色生命上限</td>
-<td align="left">50&#x2F;50</td>
-</tr>
-<tr>
-<td align="left">护盾</td>
-<td align="left">CharacterSD</td>
-<td align="left">角色的额外血量类型之一<br>如果角色拥有护盾，在受到伤害时优先扣减角色的护盾，溢出的伤害会作用到是生命上</td>
-<td align="left">0&#x2F;0</td>
-</tr>
-<tr>
-<td align="left">韧性</td>
-<td align="left">CharacterTN</td>
-<td align="left">角色的额外血量类型之一<br>如果角色拥有韧性，则受到的伤害将使用韧性区</td>
-<td align="left">0&#x2F;0</td>
-</tr>
-</tbody></table>
-<p>*：关于生命等数值与角色等级直接挂钩的部分，参考下表示意。</p>
-<table>
-<thead>
-<tr>
-<th align="left">等级</th>
-<th align="left">1</th>
-<th align="left">2</th>
-<th align="left">3</th>
-<th align="left">4</th>
-<th align="left">5</th>
-<th align="left">6</th>
-<th align="left">7</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">HP</td>
-<td align="left">50</td>
-<td align="left">60</td>
-<td align="left">70</td>
-<td align="left">80</td>
-<td align="left">90</td>
-<td align="left">95</td>
-<td align="left">100</td>
-</tr>
-<tr>
-<td align="left">护盾</td>
-<td align="left">0</td>
-<td align="left">0</td>
-<td align="left">0</td>
-<td align="left">0</td>
-<td align="left">0</td>
-<td align="left">0</td>
-<td align="left">0</td>
-</tr>
-<tr>
-<td align="left">韧性</td>
-<td align="left">0</td>
-<td align="left">0</td>
-<td align="left">0</td>
-<td align="left">5</td>
-<td align="left">5</td>
-<td align="left">10</td>
-<td align="left">10</td>
-</tr>
-</tbody></table>
-<h2 id="技能"><a href="#技能" class="headerlink" title="技能"></a>技能</h2><p>角色能使用的技能。</p>
-<table>
-<thead>
-<tr>
-<th align="left">名称</th>
-<th align="left">内部命名</th>
-<th align="left">期望效果</th>
-<th align="left">默认值&#x2F;初始值</th>
-<th align="left">期望定位</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">技能槽位</td>
-<td align="left">Slot_Skill</td>
-<td align="left">角色的技能槽位<br>角色拥有固定的3个技能槽位，其中第1、2槽位可装备角色拥有的任意战斗技能<br>第3槽位限定为防御类技能</td>
-<td align="left">&#x2F;</td>
-<td align="left">能够装备任意符合要求技能的槽位</td>
-</tr>
-<tr>
-<td align="left">技能</td>
-<td align="left">Skill</td>
-<td align="left">角色的战斗方式技能<br>包含6项参数<br><strong>可能要为技能的升级留一些空间，要注意</strong></td>
-<td align="left">&#x2F;</td>
-<td align="left">包含多份数据的数据体，请注意为动画留一下空间<br>三文鱼不是很擅长美术侧的方向，我不太了解这部分需要留多少部分给美术<br>因此没有写美术的部分</td>
-</tr>
-<tr>
-<td align="left">技能_冷却时间</td>
-<td align="left">CD</td>
-<td align="left">技能的冷却时间为1时，技能在每个回合都可以使用<br>大于1时，每增加1，多1回合的冷却时间<br><br>防御的冷却时间为1</td>
-<td align="left">1</td>
-<td align="left">限定在1~10，建议使用int</td>
-</tr>
-<tr>
-<td align="left">技能_五行属性</td>
-<td align="left">Element</td>
-<td align="left">技能的伤害属性包含金木水火土和无，6种<br>置空时造成无属性伤害</td>
-<td align="left">NULL</td>
-<td align="left">参数等于NULL、Metal、Wood、Water、Fire、Earth其中之一</td>
-</tr>
-<tr>
-<td align="left">技能_伤害</td>
-<td align="left">Damage</td>
-<td align="left">技能造成的伤害数值<br>技能效果为治疗时，伤害数值即为恢复量</td>
-<td align="left">0</td>
-<td align="left">为一个整数</td>
-</tr>
-<tr>
-<td align="left">技能_技能效果</td>
-<td align="left">SkillEffect</td>
-<td align="left">技能造成的，诸如治疗、中毒、易伤等效果<br>一个技能至多拥有3个效果<br>防御技能也拥有技能效果</td>
-<td align="left">&#x2F;</td>
-<td align="left">交给程序来实现了，应该是一个可接入技能效果的配置</td>
-</tr>
-<tr>
-<td align="left">技能_前摇</td>
-<td align="left">SkillTimeCost</td>
-<td align="left">技能的释放使用的【瞬】数<br>当角色的技能&lt;前摇&gt;小于目标的技能&lt;前摇&gt;时，视作先攻<br>当角色被先攻时，未释放技能的&lt;前摇&gt;会被增加等同于攻击人技能&lt;造成硬直&gt;数目的数值<br>当&lt;前摇&gt;大于10时，技能会被取消释放<br>防御的前摇为0<br>前摇为-1时，技能为瞬发技能</td>
-<td align="left">1</td>
-<td align="left">为整数，建议用int<br>瞬发技能和防御的结算先后，请参考“战斗过程”</td>
-</tr>
-<tr>
-<td align="left">技能_造成硬直</td>
-<td align="left">StunTime</td>
-<td align="left">技能造成先攻时，目标的未释放技能增加&lt;造成硬直&gt;数值的&lt;前摇&gt;</td>
-<td align="left">0</td>
-<td align="left">为0~11的一个整数，建议用int</td>
-</tr>
-<tr>
-<td align="left">技能_破韧</td>
-<td align="left">AntiTN</td>
-<td align="left">技能造成伤害时，如目标拥有韧性，则在韧性区加算破韧<br>韧性区部分，参见“结算公式—韧性区”</td>
-<td align="left">0.00</td>
-<td align="left">为一个浮点数，需要使用2位小数</td>
-</tr>
-<tr>
-<td align="left">技能_防御_伤害减免</td>
-<td align="left">DamageRE</td>
-<td align="left">会让最终伤害乘算伤害减免数值</td>
-<td align="left">0.50</td>
-<td align="left">为一个浮点数，需要使用2位小数<br>不会大于1.00</td>
-</tr>
-</tbody></table>
-<h2 id="相性"><a href="#相性" class="headerlink" title="相性"></a>相性</h2><p>角色的属性类型，一个角色可能拥有多个相性。</p>
-<p>与相性有关的结算，参见“结算公式——相性区”</p>
-<table>
-<thead>
-<tr>
-<th align="left">名称</th>
-<th align="left">内部命名</th>
-<th align="left">期望效果</th>
-<th align="left">默认值&#x2F;初始值</th>
-<th align="left">期望定位</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">相性</td>
-<td align="left">Basis</td>
-<td align="left">角色的属性类型<br>一个角色可能有多个相性<br>至多为5，至少为1</td>
-<td align="left">&#x2F;</td>
-<td align="left">角色的&lt;技能_属性&gt;，需要和&lt;相性_五行属性&gt;匹配。如不匹配则角色不能装备这一技能<br>NULL属性的技能，即无属性技能，可以无视该规则</td>
-</tr>
-<tr>
-<td align="left">相性_五行属性</td>
-<td align="left">Element</td>
-<td align="left">相性的属性包含金木水火土，共5种</td>
-<td align="left">Metal</td>
-<td align="left">参数等于Metal、Wood、Water、Fire、Earth其中之一</td>
-</tr>
-<tr>
-<td align="left">相性_相性强度</td>
-<td align="left">Strength</td>
-<td align="left">相性的强度分为高或低</td>
-<td align="left">0</td>
-<td align="left">参数等于1或0，可能会是个布尔型变量<br>1为强、0为弱</td>
-</tr>
-</tbody></table>
-<h2 id="命格"><a href="#命格" class="headerlink" title="命格"></a>命格</h2><p>角色的天赋，一个角色可能拥有多个命格。</p>
-<table>
-<thead>
-<tr>
-<th align="left">名称</th>
-<th align="left">内部命名</th>
-<th align="left">期望效果</th>
-<th align="left">默认值&#x2F;初始值</th>
-<th align="left">期望定位</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">命格</td>
-<td align="left">Fate</td>
-<td align="left">角色的天赋，一个角色可能有多个命格</td>
-<td align="left">&#x2F;</td>
-<td align="left">&#x2F;</td>
-</tr>
-<tr>
-<td align="left">命格_命格效果</td>
-<td align="left">FateEffect</td>
-<td align="left">命格的具体效果，一个命格恒定对应1个效果</td>
-<td align="left">&#x2F;</td>
-<td align="left">例如“造成木属性伤害提升20%”这样的效果</td>
-</tr>
-</tbody></table>
-<h1 id="结算公式"><a href="#结算公式" class="headerlink" title="结算公式"></a>结算公式</h1><blockquote>
-<p>最终伤害 &#x3D; (相性区 * 基础值) * (1 + 增伤区 + 易伤区 - 伤害减免区) * 先攻区 * 韧性区 * 特殊乘区 + 固定值；</p>
-</blockquote>
-<h2 id="相性区"><a href="#相性区" class="headerlink" title="相性区"></a>相性区</h2><p>相性的强弱和有无对应不同的伤害系数。</p>
-<p>涉及到浮点数时，采用向下取整的原则。</p>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>强相性</th>
-<th>弱相性</th>
-<th>无相性</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>受到对应属性伤害</td>
-<td>50%</td>
-<td>100%</td>
-<td>130%</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>一个强火相的角色受到【50】点火属性伤害，则在仅计算相性区时，该角色受到的伤害为【50 * 50% &#x3D; 25】点火属性伤害。</p>
-<p>一个无火相的角色受到【50】点火属性伤害，则在仅计算相性区时，该角色受到的伤害为【50 * 130% &#x3D; 65】点火属性伤害。</p>
-<p>一个无火相的角色受到【66】点火属性伤害，则在仅计算相性区时，该角色受到的伤害为【66 * 130% &#x3D; 85.8】点火属性伤害。但由于向下取整，该角色受到【85】点火属性伤害。</p>
-</blockquote>
-<h2 id="基础值"><a href="#基础值" class="headerlink" title="基础值"></a>基础值</h2><p>基础值等于Damege的数值。</p>
-<h2 id="增伤区、易伤区、伤害减免区"><a href="#增伤区、易伤区、伤害减免区" class="headerlink" title="增伤区、易伤区、伤害减免区"></a>增伤区、易伤区、伤害减免区</h2><p>增伤区使用<strong>“造成……伤害提升……”</strong>字眼；</p>
-<p>易伤区使用<strong>“受到……伤害提升……”</strong>字眼；</p>
-<p>伤害减免区使用<strong>“受到……伤害降低……”</strong>字眼；</p>
-<p>这三个数值均为浮点数，伤害减免更常见于防御技能上。</p>
-<blockquote>
-<p>举例来说，如【造成 木属性 伤害提升 20%】或者【受到 伤害降低 50%】。</p>
-</blockquote>
-<h2 id="先攻区"><a href="#先攻区" class="headerlink" title="先攻区"></a>先攻区</h2><p>造成先攻的条件如下：</p>
-<ol>
-<li>攻击方和受攻击方的&lt;技能&gt;均未结算</li>
-<li>攻击方未结算&lt;技能&gt;的&lt;前摇&gt;数值小于受攻击方未结算&lt;技能&gt;的&lt;前摇&gt;数值</li>
-</ol>
-<blockquote>
-<p>举例来说：</p>
-<p>陈听枫 对 三文鱼 使用 流年不利（前摇2）</p>
-<p>三文鱼 对 陈听枫 使用 咸鱼突刺（前摇4）</p>
-<p>则 陈听枫 对 三文鱼 造成先攻</p>
-<p>陈听枫 对 三文鱼 使用 流年不利（前摇2）</p>
-<p>三文鱼 使用 防御（前摇0）</p>
-<p>则 陈听枫 不对 三文鱼 造成先攻</p>
-<p>陈听枫 对 三文鱼 使用 凶星坐命（瞬发，前摇-1）</p>
-<p>三文鱼 使用 防御（前摇0）</p>
-<p>则 陈听枫 对 三文鱼 造成先攻</p>
-</blockquote>
-<p>先攻时，造成伤害乘以先攻伤害倍率、强化技能效果，并对受攻击方造成硬直。在技能设计表中，先攻效果和伤害倍率如下划线部分所示：</p>
-<table>
-<thead>
-<tr>
-<th>技能名</th>
-<th><em>技能修饰文本</em></th>
-<th>技能定位</th>
-<th><em>描述文本</em></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>常态效果</td>
-<td></td>
-<td>先攻效果</td>
-<td></td>
-</tr>
-<tr>
-<td>技能前摇</td>
-<td>4</td>
-<td><u>造成硬直</u></td>
-<td><u>0</u></td>
-</tr>
-<tr>
-<td>技能伤害</td>
-<td>1</td>
-<td><u>先攻伤害倍率</u></td>
-<td><u>150%</u></td>
-</tr>
-<tr>
-<td>技能属性</td>
-<td>NULL</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>技能冷却</td>
-<td>1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>技能效果</td>
-<td><em>描述文本</em></td>
-<td><u>先攻强化效果</u></td>
-<td><u><em>描述文本</em></u></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>资源名称</td>
-<td><em>文件名</em></td>
-<td>动画目的</td>
-<td><em>描述文本</em></td>
-</tr>
-</tbody></table>
-<h2 id="韧性区"><a href="#韧性区" class="headerlink" title="韧性区"></a>韧性区</h2><p>如果受攻击角色存在韧性，使用韧性结算规则。目的是让玩家冒险谋取更大的伤害减免效果。</p>
-<p>韧性区包含&lt;韧性减伤&gt;和&lt;破韧&gt;两部分，&lt;韧性减伤&gt;固定为75%，&lt;破韧&gt;则根据技能而定。</p>
-<p>韧性区的数值和等于（&lt;韧性减伤&gt;+&lt;破韧&gt;），即&lt;破韧&gt;+75%.</p>
-<blockquote>
-<p>举例来说：</p>
-<p>情形1：角色拥有100HP，5韧性，受到20点无属性伤害</p>
-<p>角色受到20*75%&#x3D;15点伤害</p>
-<p><em>结算完毕后，角色剩余90HP，0韧性</em></p>
-<p><em>情形2：角色拥有100HP，20韧性，受到20点无属性伤害</em></p>
-<p>角色受到20*75%&#x3D;15点伤害</p>
-<p>结算完毕后，角色剩余100HP，5韧性</p>
-<p>情形3：角色拥有100HP，20韧性，受到20点无属性伤害，伤害拥有50%破韧</p>
-<p>角色受到20*（50%+75%）&#x3D;25点伤害</p>
-<p>结算完毕后，角色剩余95HP，0韧性</p>
-</blockquote>
-<h2 id="特殊乘区"><a href="#特殊乘区" class="headerlink" title="特殊乘区"></a>特殊乘区</h2><p>不在上述表述范围内即视作特殊乘区，多为特殊的技能效果。</p>
-<h2 id="固定值"><a href="#固定值" class="headerlink" title="固定值"></a>固定值</h2><p>仅在部分道具&#x2F;特殊命格作用下才会存在这个区间。</p>
-<blockquote>
-<p>一般的表现形式为“造成伤害时，额外追加5点伤害”</p>
-</blockquote>
-<h1 id="战斗过程"><a href="#战斗过程" class="headerlink" title="战斗过程"></a>战斗过程</h1><h2 id="战斗流程"><a href="#战斗流程" class="headerlink" title="战斗流程"></a>战斗流程</h2><p><img src="/2024/03/11/dl-PJSHrole/2.png"></p>
-<h2 id="瞬发与防御"><a href="#瞬发与防御" class="headerlink" title="瞬发与防御"></a>瞬发与防御</h2><p>这里以某一个回合内各节点为例</p>
-<p><img src="/2024/03/11/dl-PJSHrole/3.png"></p>
-<h1 id="游戏阶段"><a href="#游戏阶段" class="headerlink" title="游戏阶段"></a>游戏阶段</h1><p>将战斗内容根据剧情和关卡设计，分成N（N≥3）个相对阶段。目前暂定N为6。</p>
-<p>每个阶段对应一个固定难度数值，实操时在10%的上下区间内浮动。我们将这一数值称为【难度乘子】。</p>
-<p>若某一阶段的难度为10，则该阶段的具体数值将在9~11的区间，BOSS战则为12。</p>
-<h2 id="难度曲线"><a href="#难度曲线" class="headerlink" title="难度曲线"></a>难度曲线</h2><p>设第一阶段难度乘子为10，则得到各阶段对应数据如下。</p>
-<table>
-<thead>
-<tr>
-<th>阶段</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>难度乘子</td>
-<td>10</td>
-<td>14</td>
-<td>17</td>
-<td>20</td>
-<td>24</td>
-<td>30</td>
-</tr>
-<tr>
-<td>成长</td>
-<td>&#x2F;</td>
-<td>4</td>
-<td>3</td>
-<td>3</td>
-<td>4</td>
-<td>6</td>
-</tr>
-<tr>
-<td>等级</td>
-<td>1</td>
-<td>2~3</td>
-<td>4~5</td>
-<td>6</td>
-<td>7~8</td>
-<td>9~10</td>
-</tr>
-<tr>
-<td>以HP为例</td>
-<td>50</td>
-<td>70</td>
-<td>90</td>
-<td>100</td>
-<td>120</td>
-<td>150</td>
-</tr>
-</tbody></table>
-<p><img src="/2024/03/11/dl-PJSHrole/4.png" alt="对应图表"></p>
-<p>其他的数值大体上遵照难度曲线展开。</p>
-<h2 id="期望造伤"><a href="#期望造伤" class="headerlink" title="期望造伤"></a>期望造伤</h2><p>一场战斗的期望回合数在3~5较为合适，BOSS战则可以延长至至多12个回合。</p>
-<p>因此，我们将某一技能的造伤能力设置为，仅凭【白值+命格】，在5次攻击后，可以击败同阶段参考HP的角色。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PJSH/" rel="tag">PJSH</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E5%80%BC/" rel="tag">数值</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%AA%E5%8F%91%E5%B8%83/" rel="tag">未发布</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%B3%BB%E7%BB%9F/" rel="tag">系统</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
   id="post-dl-PJSHkeyi"
   class="article article-type-post"
   itemscope
@@ -1923,6 +1451,87 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%82%E4%B8%96%E7%95%8C%E6%83%85%E7%BB%AA/" rel="tag">异世界情绪</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A5%9E%E6%A4%BF/" rel="tag">神椿</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-dl-joucholibrary"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/11/dl-joucholibrary/"
+    >同人文，图书馆</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/11/dl-joucholibrary/" class="article-date">
+  <time datetime="2024-03-10T21:06:49.000Z" itemprop="datePublished">2024-03-11</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%90%8C%E4%BA%BA%E6%96%87/">同人文</a> / <a class="article-category-link" href="/categories/%E5%90%8C%E4%BA%BA%E6%96%87/%E5%B0%8F%E8%AF%B4/">小说</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>神椿学院的图书馆大概能算是学院里最有神秘味道的地方。</p>
+<p>倒不是说这里有什么「校园不可思议」，或者什么其他的传奇故事。</p>
+<p>魔法的事，应该算不上是传说，但是学院本身又不是那么幻想系的存在。如果魔法广泛而普遍地存在的话，也许我们的情绪小姐就能像她希望的那样学会飞行，可惜这并不是这一方土地上的真实。虽然她自己一个人独处遐想的时候，偶尔会张开双手，想让自己能像动画里那样在迷之气流的加持下升空而起，但这样的事并不存在。</p>
+<p>不过呢，图书馆本身还算得上是有一些魔法要素存在的，比如说在图书馆里面似乎永远都走不到边界。要是在书架间穿行，总会觉得书架的数量永远数不清，两人结伴而行的话，也会很快在书架间因为离散而迷路。除非想要离开——那么总会忽然发现大门就在前方不远处的。</p>
+<p>不知道其他学生是否喜欢这样的图书馆，但至少情绪在这种环境下过的很舒心。</p>
+<p>今日的图书馆有雨光顾，自玻璃窗向外看，一切都褪去了几何外形，仅剩揉在一起的斑斑色块。煤油燃烧的摇曳暖黄穿过玻璃灯罩，她将手靠近提灯以取暖。窗外有细密的雨滴化作条条白线，飞速划过情绪视野中的这一小方空气，但即使不用眼睛看也能知道。雨滴落在屋顶与地面的时候，自有它的声响。</p>
+<p>「也许这种声响，是雨的语言也说不定。」</p>
+<p>偶尔，情绪也会这么想。但是雨的语言似乎没有那么好解读。屋顶上滴滴答答的声音，并不是一直都有意思。虽然有几声会让她想起杯子里冰块碰撞的声响，但那也只是雨滴敲到空心瓦片的缘故——意味着瓦片质量不佳、屋顶可能会因为下雨而漏水、或者情绪小姐又想要吃点冰块了。</p>
+<p>所以，比起语言层面的传情达意，雨滴似乎更擅长用实际行动的方式表达意义。空气中弥漫着浓厚粘稠的冰冷水汽，虽然让手心感觉湿冷，但又不像是雾一样可见，显然是雨落带来的现象。如此这般，让情绪觉得有几分呼吸困难。大概是冷的缘故，她裹紧了几分大衣，已经快入冬了。</p>
+<p>那么今年，是不是会下雪呢？</p>
+<p>水汽中有书架上用的樟木渗出的气味，吸入鼻腔时微微发苦，但也有香的一面。这些架子比她年纪要大得多，却能恒久的保护上面堆放的手稿和抄本不被虫蛀。只是在这种多雨的天气下，比起虫蛀来说，也许霉变是更值得担心的事。</p>
+<p>「还好换上了新的石灰。」</p>
+<p>情绪摸了摸碟子，指尖触碰到的白色粉尘相当干燥，像是白砂、又更细腻。她安心，合上手中的书，叹了口气。站定半晌，那盏灯又摇晃着光芒，与她一齐向下一处书架而去。摇曳的光芒把她的影子也照耀的前后摆动，像是有巨大的人形在图书馆里前后摇摆。</p>
+<p>情绪很小心，没有踏破书架间积留的灰尘。那些灰尘对应的是不那么有意思的书名，或者不怎么引人注目的封面。总是有些书没什么人看，与其打扰它们的宁静，不如让它们继续静静地呆在原本的空间里。至少她是这么认为的。</p>
+<p>用书架上摆放的小碟石灰吸收水汽在神椿学院的图书馆里是惯用的做法。这儿的图书管理员似乎是那种喜欢怀旧的人，但是维护一个偌大的图书馆处处安定，亦是件麻烦事。于是这项工作偶尔会拜托给经常出现在这里的情绪。</p>
+<p>至于情绪自己，是认为比起寻求石灰吸潮的功能性，这样重复的劳动更有让人感到心安的仪式感的。毕竟在吸水性上有更好的干燥剂可选，而石灰则是古时候人们迫不得已采用的选择。</p>
+<p>她记得每个碟子摆放的位置，去换新的时候，会觉得此刻是能感到平静的，于是这件事就这样持续下来了。</p>
+<p>本就安静的偌大图书馆于雨中更是寂静无声，仅有她走动时发出的踏踏声在书架间回荡。偶尔有几方木地板会吱呀着对少女的靴子表示抗议，但这些异响很快就消散在提灯之外的黑暗中，之后无声再有。她就这样越过层层叠叠的书架，径直走到窗边。</p>
+<p>习惯性地伸了个懒腰。哈欠之余，情绪转头看了看不远处的落地钟，似乎指针中稍短的那根刚刚转过四点。下午还没有结束，那么她做完这些闲杂事务的时间就不算晚。至少不会让她错过要等的那个人。</p>
+<p>情绪下午没有社团活动的习惯，然而春猿火有。于是这段时间变成了她在图书馆消磨时间的时间，也许有点拗口，但是很像情绪每周都会度过的这个下午。无论是穿行书架的路线，或是馆内灰尘沉积的多少，还是越接近四点，就和提灯火苗一样越发活动的心理。这些事和「时间的时间」这样的修辞同等复杂，甚至有过之而无不及。</p>
+<p>因为春猿火会拉她一起在回家路上转去甜品或者奶茶店的，这样她可以名正言顺的嚼着杯子里的冰块。</p>
+<p>大概是这样吧。</p>
+<p>情绪抬头往向天空，视线所见仅有图书馆挑高的天花板。下雨的日子，银河是熄灭的，也看不到太阳。也许像她幻想的那样，如果能飞起来的话，目光就能越过雨云层，那样就可以像以往无数次这种日子的时候，在面对自己不知道答案的问题时，用夕阳的话题搪塞自己。但她此刻仍旧窝在图书馆中，能够看见的只有天花板下的方寸空间。</p>
+<p>如果她没有办法逃避的话，可能她不得不承认自己对春猿火除了普通的友情、甜品的感情之外还有一些别的情愫存在。</p>
+<p>大概是要添新油了，用来暖手兼照明的提灯光芒不时闪烁一下，也渐渐从明黄转成了昏黄。但是这无关紧要，因为身后有一连串的、相当熟悉的脚步由远而近，连带着那人大声的呼喊在图书馆的书架间回荡。</p>
+<p>『情绪老师！准备出发去袭击甜品店了！』</p>
+<p>情绪笑着灭掉灯，看来今天也不用太在意这样那样复杂问题的答案了。没有夕阳用来搪塞自己，对甜品和冰块的遐想也是可行的。</p>
+<p>当然，也许她自己已经有答案了。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%A7%E6%83%85/" rel="tag">剧情</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%82%E4%B8%96%E7%95%8C%E6%83%85%E7%BB%AA/" rel="tag">异世界情绪</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A5%9E%E6%A4%BF/" rel="tag">神椿</a></li></ul>
 
     </footer>
   </div>
